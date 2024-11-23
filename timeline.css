@@ -1,175 +1,264 @@
 body {
-    background: #f7f7f7; /* خاکی روشن برای پس زمینه */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f7f7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
   }
-  
-  #intro-row {
-    background-image: linear-gradient(to right, #1D4E89, #6B8BA4); /* آبی ملایم با تدریج به رنگ خاکی مایل به آبی */
-    border-bottom-right-radius: 30%;
-    color: white;
+  to {
+      opacity: 1;
   }
-  
-  #h1 {
-    font-family: 'Arial', sans-serif;
+}
+
+#intro-row {
+  background-image: linear-gradient(to right, #1D4E89, #6B8BA4);
+  border-bottom-right-radius: 30%;
+  color: white;
+  animation: slideIn 2s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-100px);
   }
-  
-  .btn {
-    font-size: 18px;
-    color: white;
-    background-color: #F2C94C; /* طلایی مات */
-    border-radius: 25px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
+  to {
+      transform: translateY(0);
   }
-  
-  .btn:hover {
-    background-color: #D1A21A; /* طلایی تیره‌تر در حالت هاور */
+}
+
+#h1 {
+  font-family: 'Arial', sans-serif;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
   }
-  
-  #create-item {
-    text-decoration: none;
-    color: #1D4E89; /* آبی ملایم */
-    font-size: larger;
-    text-align: center;
+  40% {
+      transform: translateY(-10px);
   }
-  
-  #add-item-h3 {
-    padding: 12px;
-    background-image: linear-gradient(to right, #F2C94C, #F2B67F); /* طلایی روشن */
-    color: white;
+  60% {
+      transform: translateY(-5px);
   }
-  
-  #add-new-item-btn {
-    background-image: linear-gradient(to right, #F2C94C, #F2B67F); /* طلایی مات */
-    border-radius: 25px;
-    color: white;
-    padding: 10px 20px;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px;
+  margin: 0 auto;
+  overflow: hidden;
+  color: #333;
+  animation: fadeInTimeline 1.5s ease-in-out;
+}
+
+@keyframes fadeInTimeline {
+  from {
+      opacity: 0;
   }
-  
-  #download-pdf-item-btn {
-    background-image: linear-gradient(to right, #1D4E89, #6B8BA4); /* آبی تیره */
-    border-radius: 25px;
-    color: white;
-    padding: 10px 20px;
+  to {
+      opacity: 1;
   }
-  
-  #download-pdf-item-btn:hover {
-    background-color: #153E6E; /* آبی تیره‌تر */
+}
+
+.timeline-row {
+  padding-left: 50%;
+  position: relative;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeInTimelineRow 2s forwards;
+}
+
+@keyframes fadeInTimelineRow {
+  from {
+      opacity: 0;
   }
-  
-  #newItemForm {
-    font-weight: bold;
-    font-size: large;
-    background-color: #ffffff; /* سفید برای فرم‌ها */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  to {
+      opacity: 1;
   }
-  
-  .timeline {
-    font-family: 'Arial', sans-serif;
-    position: relative;
-    padding: 20px;
-    margin: 0 auto;
-    overflow: hidden;
-    color: #333;
+}
+
+.timeline-row .timeline-time {
+  position: absolute;
+  right: 50%;
+  top: 31px;
+  text-align: right;
+  margin-right: 20px;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: slideInTime 1.5s ease-out;
+}
+
+@keyframes slideInTime {
+  from {
+      transform: translateX(50px);
   }
-  
-  .timeline:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -1px;
-    border-right: 2px dashed #D1D1D1;
-    height: 100%;
+  to {
+      transform: translateX(0);
   }
-  
-  .timeline-row {
-    padding-left: 50%;
-    position: relative;
-    margin-bottom: 30px;
+}
+
+.timeline-row .timeline-content {
+  position: relative;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideInContent 1.5s ease-out;
+}
+
+@keyframes slideInContent {
+  from {
+      transform: translateX(50px);
   }
-  
-  .timeline-row .timeline-time {
-    position: absolute;
-    right: 50%;
-    top: 31px;
-    text-align: right;
-    margin-right: 20px;
-    color: #000;
-    font-size: 1.5rem;
+  to {
+      transform: translateX(0);
   }
-  
-  .timeline-row .timeline-time small {
-    display: block;
-    font-size: .8rem;
-    color: #8A8A8A;
+}
+
+.timeline-row:nth-child(even) .timeline-content {
+  background-color: #E4F0F7;
+  margin-left: 40px;
+  text-align: right;
+}
+
+.timeline-row:nth-child(odd) .timeline-content {
+  background-color: #F2F2F2;
+  margin-right: 40px;
+  text-align: left;
+}
+
+.timeline-row .timeline-content i {
+  font-size: 30px;
+  margin-right: 10px;
+  color: #1D4E89;
+  animation: rotateIcon 2s infinite;
+}
+
+@keyframes rotateIcon {
+  0% {
+      transform: rotate(0deg);
   }
-  
-  .timeline-row .timeline-content {
-    position: relative;
-    padding: 20px 30px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  100% {
+      transform: rotate(360deg);
   }
-  
-  .timeline-row .timeline-content:before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: -50px;
-    width: 20px;
-    height: 20px;
-    border-radius: 100px;
-    background: #ffffff;
-    border: 2px dashed #D1D1D1;
+}
+
+#filter-h3, #output-h3 {
+  padding: 10px;
+  background-image: linear-gradient(to right, #1D4E89, #6B8BA4);
+  color: white;
+  animation: fadeInSection 1s ease-in-out;
+}
+
+@keyframes fadeInSection {
+  from {
+      opacity: 0;
   }
-  
-  .timeline-row .timeline-content h4 {
-    margin: 0 0 20px 0;
-    line-height: 150%;
+  to {
+      opacity: 1;
   }
-  
-  .timeline-row .timeline-content p {
-    margin-bottom: 30px;
-    line-height: 150%;
+}
+
+#filter-btn, #add-new-item-btn, #download-pdf-item-btn, #delete-item-btn {
+  transition: all 0.3s ease-in-out;
+  background-image: linear-gradient(to right, #1D4E89, #6B8BA4);
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+#filter-btn:hover, #add-new-item-btn:hover, #download-pdf-item-btn:hover, #delete-item-btn:hover {
+  transform: scale(1.1);
+  background-color: #D1A21A;
+}
+
+#add-item-h3 {
+  padding: 12px;
+  background-image: linear-gradient(to right, #F2C94C, #F2B67F);
+  color: white;
+  animation: slideInH3 2s ease-out;
+}
+
+@keyframes slideInH3 {
+  from {
+      transform: translateY(-50px);
   }
-  
-  .timeline-row:nth-child(even) .timeline-content {
-    background-color: #E4F0F7; /* رنگ پس‌زمینه ملایم آبی */
-    margin-left: 40px;
-    text-align: right;
+  to {
+      transform: translateY(0);
   }
-  
-  .timeline-row:nth-child(odd) .timeline-content {
-    background-color: #F2F2F2; /* خاکی روشن */
-    margin-right: 40px;
-    text-align: left;
+}
+
+#newItemForm {
+  font-weight: bold;
+  font-size: large;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-dot {
+  border: 5px solid #1D4E89;
+  background-color: #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  animation: pulseDot 1s infinite;
+}
+
+@keyframes pulseDot {
+  0% {
+      transform: scale(1);
+      opacity: 1;
   }
-  
-  #filter-h3, #output-h3 {
-    padding: 10px;
-    background-image: linear-gradient(to right, #1D4E89, #6B8BA4); /* آبی ملایم */
-    color: white;
+  50% {
+      transform: scale(1.5);
+      opacity: 0.5;
   }
-  
-  #filter-btn {
-    background-image: linear-gradient(to right, #1D4E89, #6B8BA4); /* آبی ملایم */
-    border-radius: 25px;
-    padding: 10px 20px;
+  100% {
+      transform: scale(1);
+      opacity: 1;
   }
-  
-  #filter-btn:hover {
-    background-color: #153E6E; /* آبی تیره‌تر در هاور */
-  }
-  
-  #filtered-results {
-    background: #ffffff;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
+}
+
+.timeline-row:nth-child(odd) .timeline-content i {
+  color: #D1A21A;
+}
+
+.timeline-row:nth-child(even) .timeline-content i {
+  color: #1D4E89;
+}
+
+#filtered-results {
+  background: #ffffff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#delete-btn, #download-pdf-item-btn {
+  transition: all 0.3s ease-in-out;
+  background-image: linear-gradient(to right, #F2C94C, #F2B67F); /* زرد گرادیان */
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+#delete-btn:hover, #download-pdf-item-btn:hover {
+  transform: scale(1.1);
+  background-color: #F2B67F; /* رنگ زرد روشن تر هنگام هاور */
+}
+
+

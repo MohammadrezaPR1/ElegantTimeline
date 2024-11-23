@@ -133,6 +133,8 @@ function renderTimeline() {
                 </div>
                 <div class="timeline-dot fb-bg"></div>
                 <div class="timeline-content">
+                
+
                     <h4>${item.title}</h4>
                     <p>${item.description}</p>
                     <button class="btn  p-2 btn-sm mt-2" onclick="removeItem(this)" id="delete-btn" >Delete Item</button>
