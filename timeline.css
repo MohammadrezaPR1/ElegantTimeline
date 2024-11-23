@@ -1,0 +1,175 @@
+body {
+    background: #f7f7f7; /* خاکی روشن برای پس زمینه */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  #intro-row {
+    background-image: linear-gradient(to right, #1D4E89, #6B8BA4); /* آبی ملایم با تدریج به رنگ خاکی مایل به آبی */
+    border-bottom-right-radius: 30%;
+    color: white;
+  }
+  
+  #h1 {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .btn {
+    font-size: 18px;
+    color: white;
+    background-color: #F2C94C; /* طلایی مات */
+    border-radius: 25px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #D1A21A; /* طلایی تیره‌تر در حالت هاور */
+  }
+  
+  #create-item {
+    text-decoration: none;
+    color: #1D4E89; /* آبی ملایم */
+    font-size: larger;
+    text-align: center;
+  }
+  
+  #add-item-h3 {
+    padding: 12px;
+    background-image: linear-gradient(to right, #F2C94C, #F2B67F); /* طلایی روشن */
+    color: white;
+  }
+  
+  #add-new-item-btn {
+    background-image: linear-gradient(to right, #F2C94C, #F2B67F); /* طلایی مات */
+    border-radius: 25px;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  #download-pdf-item-btn {
+    background-image: linear-gradient(to right, #1D4E89, #6B8BA4); /* آبی تیره */
+    border-radius: 25px;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  #download-pdf-item-btn:hover {
+    background-color: #153E6E; /* آبی تیره‌تر */
+  }
+  
+  #newItemForm {
+    font-weight: bold;
+    font-size: large;
+    background-color: #ffffff; /* سفید برای فرم‌ها */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline {
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    padding: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+    color: #333;
+  }
+  
+  .timeline:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    border-right: 2px dashed #D1D1D1;
+    height: 100%;
+  }
+  
+  .timeline-row {
+    padding-left: 50%;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .timeline-row .timeline-time {
+    position: absolute;
+    right: 50%;
+    top: 31px;
+    text-align: right;
+    margin-right: 20px;
+    color: #000;
+    font-size: 1.5rem;
+  }
+  
+  .timeline-row .timeline-time small {
+    display: block;
+    font-size: .8rem;
+    color: #8A8A8A;
+  }
+  
+  .timeline-row .timeline-content {
+    position: relative;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline-row .timeline-content:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -50px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background: #ffffff;
+    border: 2px dashed #D1D1D1;
+  }
+  
+  .timeline-row .timeline-content h4 {
+    margin: 0 0 20px 0;
+    line-height: 150%;
+  }
+  
+  .timeline-row .timeline-content p {
+    margin-bottom: 30px;
+    line-height: 150%;
+  }
+  
+  .timeline-row:nth-child(even) .timeline-content {
+    background-color: #E4F0F7; /* رنگ پس‌زمینه ملایم آبی */
+    margin-left: 40px;
+    text-align: right;
+  }
+  
+  .timeline-row:nth-child(odd) .timeline-content {
+    background-color: #F2F2F2; /* خاکی روشن */
+    margin-right: 40px;
+    text-align: left;
+  }
+  
+  #filter-h3, #output-h3 {
+    padding: 10px;
+    background-image: linear-gradient(to right, #1D4E89, #6B8BA4); /* آبی ملایم */
+    color: white;
+  }
+  
+  #filter-btn {
+    background-image: linear-gradient(to right, #1D4E89, #6B8BA4); /* آبی ملایم */
+    border-radius: 25px;
+    padding: 10px 20px;
+  }
+  
+  #filter-btn:hover {
+    background-color: #153E6E; /* آبی تیره‌تر در هاور */
+  }
+  
+  #filtered-results {
+    background: #ffffff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  

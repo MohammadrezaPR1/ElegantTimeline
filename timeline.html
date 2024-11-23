@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start your plan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="timeline.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div class="row mb-5 p-5" align="center" id="intro-row">
+        <h1 id="h1"> &#128187; My plan &#128197; </h1>
+    </div>
+    
+    <div class="container bootdey">
+        <div class="row gutters">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 id="filter-h3" class="text-light" align="center">Filter Timeline</h3>
+                        <form id="filterForm">
+                            <div class="mb-3">
+                                <label for="filter-time" class="form-label">Time</label>
+                                <input type="text" class="form-control" id="filter-time" placeholder="Example: 8 AM">
+                            </div>
+                            <div class="mb-3">
+                                <label for="filter-title" class="form-label">Title</label>
+                                <input type="text" class="form-control" id="filter-title"
+                                    placeholder="Example: Meeting">
+                            </div>
+                            <button type="button" class="btn" id="filter-btn" onclick="filterTimeline()">Apply
+                                Filter</button>
+                        </form>
+                        <!-- Display Filtered Results -->
+                        <div class="row mt-5">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <h3 id="output-h3" class="text-light" align="center">Filtered Results</h3>
+                                <div id="filtered-results" class="card">
+                                    <div class="card-body">
+                                        <div id="results-content"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Timeline start -->
+                        <div class="timeline" id="timeline">
+                            <div class="timeline-row">
+                                <div class="timeline-time">
+                                    <h2> Start Point</h2>
+                                    <h5>What does this timeline do?</h5>
+                                </div>
+                                <div class="timeline-dot fb-bg"></div>
+                                <div class="timeline-content" style="text-align: left" ;>
+                                    <i class="fa fa-bell"></i>
+                                    <h4 align="start">Hello Guys</h4>
+                                    <p align="start">You can record your daily schedule or goals for different time
+                                        periods here so you don't forget later.</p>
+                                    <div class="">
+                                        <span class="badge badge-light" align="center"><a href="#newItemForm"
+                                                id="create-item">Add new activity</a></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more timeline items as needed -->
+                        </div>
+                        <!-- Timeline end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- افزودن آیتم به تایم لاین -->
+        <div class="row mt-5 mb-3 ">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <h3 id="add-item-h3" class="text-light" align="center">Add new item</h3>
+                <form id="newItemForm">
+                    <div class="mb-3">
+                        <label for="time" class="form-label">time</label>
+                        <input type="text" class="form-control" id="time" placeholder="Example:8 AM">
+                    </div>
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Date</label>
+                        <input type="text" class="form-control" id="date" placeholder="Example:10 September">
+                    </div>
+                    <div class="mb-3">
+                        <label for="title" class="form-label">title</label>
+                        <input type="text" class="form-control" id="title" placeholder="Title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">comment</label>
+                        <textarea class="form-control" id="description" rows="3" placeholder="Comment"></textarea>
+                    </div>
+                    <button type="button" class="btn " id="add-new-item-btn" onclick="addNewItem()">Add New
+                        Item</button>
+                    <button type="button" class="btn " id="download-pdf-item-btn" onclick="downloadPDF()">Download
+                        PDF</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="timeline.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- کتاب خانه ای برای تبدیل صفحه به پی دی اف  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+
+
+</body>
+
+</html>
