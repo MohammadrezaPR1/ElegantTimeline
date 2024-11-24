@@ -247,7 +247,7 @@ body {
 
 #delete-btn, #download-pdf-item-btn {
   transition: all 0.3s ease-in-out;
-  background-image: linear-gradient(to right, #F2C94C, #F2B67F); /* زرد گرادیان */
+  background-image: linear-gradient(to right, #F2C94C, #F2B67F); 
   border-radius: 25px;
   padding: 10px 20px;
   color: white;
@@ -258,7 +258,7 @@ body {
 
 #delete-btn:hover, #download-pdf-item-btn:hover {
   transform: scale(1.1);
-  background-color: #F2B67F; /* رنگ زرد روشن تر هنگام هاور */
+  background-color: #F2B67F; 
 }
 
 

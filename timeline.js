@@ -10,23 +10,6 @@ function addNewItem() {
     alert("Please fill out all fields before adding a new item.");
     return;
   }
-
-  // // Create a new timeline row
-  // const newItem = document.createElement("div");
-  // newItem.classList.add("timeline-row");
-  // newItem.innerHTML = `
-  //     <div class="timeline-time" align="center">
-  //        <h3>${time}</h3>
-  //        <h4>${date}</h4>
-  //     </div>
-  //     <div class="timeline-dot fb-bg"></div>
-  //     <div class="timeline-content">
-  //         <i class="fa fa-bell"></i>
-  //         <h4>${title}</h4>
-  //         <p>${description}</p>
-  //     </div>
-  // `;
-
   // Add the new timeline row to the timeline container
   const timeline = document.getElementById("timeline");
   timeline.appendChild(newItem);
